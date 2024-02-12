@@ -1,3 +1,15 @@
-<div class="bg-container">
-  <canvas id="canvas1" #canvas1></canvas>
-</div>
+<!-- <div class="bg-container"></div> -->
+
+<label for="gameSpeed" style="color: snow"
+  >Game Speed: {{ gameSpeed }}
+  <br />
+  <input
+    id="gameSpeed"
+    class="slider"
+    type="range"
+    min="0"
+    max="20"
+    [value]="gameSpeed"
+    (input)="setGameSpeed($event)"
+/></label>
+<canvas id="canvas1" #canvas1></canvas>
