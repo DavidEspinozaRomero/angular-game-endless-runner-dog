@@ -1,0 +1,17 @@
+<canvas id="canvas1" #canvas1></canvas>
+
+<div class="controls">
+  <label for="animations">
+    Chose Animation:
+    <select
+      name="animations"
+      id="animations"
+      (change)="selectAnimation($event)"
+    >
+      @for (option of animationStates; let animation_i = $index; track
+      animation_i) {
+      <option [value]="option.name">{{ option.name }}</option>
+      }
+    </select>
+  </label>
+</div>
