@@ -17,6 +17,7 @@ export class AnimationTriggerComponent implements OnInit {
   CANVAS_WIDTH: number = 500;
   CANVAS_HEIGHT: number = 700;
   canvasPosition!: DOMRect;
+  sound = new Audio();
 
   explosions: Explosion[] = [];
 
@@ -27,6 +28,7 @@ export class AnimationTriggerComponent implements OnInit {
       this.canvasPosition = this.canvas.getBoundingClientRect();
       this.CANVAS_WIDTH = this.canvas.width = 500;
       this.CANVAS_HEIGHT = this.canvas.height = 700;
+      this.sound.src = 'assets/rumble.flac';
 
       if (this.ctx) {
         this.animate();
@@ -47,7 +49,7 @@ export class AnimationTriggerComponent implements OnInit {
     try {
       this.ctx?.clearRect(0, 0, this.CANVAS_WIDTH, this.CANVAS_HEIGHT);
       for (const explosion of this.explosions) {
-        explosion.update();
+        explosion.update(this.sound);
         explosion.draw(this.ctx!);
         if (explosion.frame > 5) this.explosions.shift();
       }
@@ -75,7 +77,9 @@ class Explosion {
     // this.y = y - this.height / 2;
   }
 
-  update() {
+  update(sound: HTMLAudioElement) {
+    if (this.frame === 0) sound.play();
+
     this.timer++;
     if (this.timer % 10 == 0) {
       this.frame++;
