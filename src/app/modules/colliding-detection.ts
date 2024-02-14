@@ -36,7 +36,16 @@ function isColliding2(circle1: CirculoProps, circle2: CirculoProps) {
   const dx = circle1.x - circle2.x;
   const dy = circle1.y - circle2.y;
   const distance = Math.hypot(dx, dy);
-  return distance <= circle1.radius + circle2.radius;
+  return distance < circle1.radius + circle2.radius;
+  /*
+  if (distance < circle1.radius + circle2.radius) {
+    // colliding
+  } else if (distance == circle1.radius + circle2.radius) {
+    // touching
+  } else {
+    // not colliding
+  }
+  */
 }
 
 interface CirculoProps {
