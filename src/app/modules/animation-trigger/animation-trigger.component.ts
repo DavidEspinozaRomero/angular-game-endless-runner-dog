@@ -36,6 +36,7 @@ export class AnimationTriggerComponent implements OnInit {
     }
   }
 
+  // startAnimation(e: MouseEvent) {
   startAnimation(e: MouseEvent) {
     const posX = e.x - this.canvasPosition.left;
     const posY = e.y - this.canvasPosition.top;
@@ -65,11 +66,13 @@ class Explosion {
   image = new Image();
   frame = 0;
   timer = 0;
+  angle = Math.random() * 6.25;
 
   constructor(private x: number, private y: number) {
     this.image.src = 'assets/boom.png';
-    this.x = x - this.width / 2;
-    this.y = y - this.height / 2;
+    // center explosion in mouse position in basic drawing
+    // this.x = x - this.width / 2;
+    // this.y = y - this.height / 2;
   }
 
   update() {
@@ -80,17 +83,34 @@ class Explosion {
     // this.frame > 5 ? (this.frame = 0) : this.frame++;
   }
 
+  // draw(ctx: CanvasRenderingContext2D) {
+  //   ctx.drawImage(
+  //     this.image,
+  //     this.frame * this.spriteWidth,
+  //     0,
+  //     this.spriteWidth,
+  //     this.spriteHeight,
+  //     this.x,
+  //     this.y,
+  //     this.width,
+  //     this.height
+  //   );
+  // }
   draw(ctx: CanvasRenderingContext2D) {
+    ctx.save();
+    ctx.translate(this.x, this.y);
+    ctx.rotate(this.angle);
     ctx.drawImage(
       this.image,
       this.frame * this.spriteWidth,
       0,
       this.spriteWidth,
       this.spriteHeight,
-      this.x,
-      this.y,
+      0 - this.width / 2,
+      0 - this.height / 2,
       this.width,
       this.height
     );
+    ctx.restore();
   }
 }
