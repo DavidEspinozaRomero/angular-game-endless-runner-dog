@@ -7,6 +7,7 @@ import {
   EnemyMovementPatternComponent,
   AnimationTriggerComponent,
   PointAndShootComponent,
+  EnemiesVarietyComponent,
 } from './modules';
 
 @Component({
@@ -20,6 +21,7 @@ import {
     EnemyMovementPatternComponent,
     AnimationTriggerComponent,
     PointAndShootComponent,
+    EnemiesVarietyComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
