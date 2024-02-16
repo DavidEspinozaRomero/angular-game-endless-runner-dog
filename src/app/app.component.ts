@@ -6,6 +6,7 @@ import {
   ParallaxBackgroundComponent,
   EnemyMovementPatternComponent,
   AnimationTriggerComponent,
+  PointAndShootComponent,
 } from './modules';
 
 @Component({
@@ -18,6 +19,7 @@ import {
     ParallaxBackgroundComponent,
     EnemyMovementPatternComponent,
     AnimationTriggerComponent,
+    PointAndShootComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
