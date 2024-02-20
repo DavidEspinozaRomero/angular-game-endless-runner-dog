@@ -1,0 +1,60 @@
+#canvas1 {
+  border: 5px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+#score {
+  position: absolute;
+  top: 2rem;
+  left: calc(50% - 2rem);
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  font-family: "Press Start 2P", cursive;
+  text-shadow: 2px 2px 2px black;
+  // font-weight: 100;
+  // letter-spacing: 2px;
+}
+.gameOver-container {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: calc(50%);
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#gameOver {
+  color: white;
+  font-size: 2rem;
+  font-family: "Press Start 2P", cursive;
+  text-shadow: 2px 2px 2px black;
+}
+
+#restart {
+  display: inline-block;
+  max-width: 8rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: blue;
+  color: white;
+  font-size: 1rem;
+  font-family: "Press Start 2P", cursive;
+  // text-shadow: 2px 2px 2px white;
+}
+.d-none {
+  display: none;
+}
+
+// .backgroundForest, .player, .enemyWorm {
+//   display: none;
+// }

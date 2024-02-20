@@ -1,0 +1,29 @@
+<h2 id="score">Score: {{ score() }}</h2>
+@if (gameOver()) {
+<div class="gameOver-container">
+  <h3 id="gameOver">Game Over</h3>
+  <input
+    id="restart"
+    type="button"
+    value="Restart Game"
+    (click)="startGame()"
+  />
+</div>
+}
+
+<canvas id="canvas1" #canvas1></canvas>
+<img
+  id="backgroundForest"
+  class="d-none"
+  src="/assets/background_forest.png"
+  alt=""
+  #backgroundForest1
+/>
+<img id="player" class="d-none" src="/assets/player.png" alt="" #player1 />
+<img
+  id="enemyWorm"
+  class="d-none"
+  src="/assets/enemy_worm.png"
+  alt=""
+  #enemyWorm1
+/>

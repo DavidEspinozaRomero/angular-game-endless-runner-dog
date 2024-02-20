@@ -54,8 +54,8 @@ export class EnemiesVarietyComponent implements OnInit {
   ) {
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     const deltaTime = timestamp - this.lastTime;
-
     this.lastTime = timestamp;
+
     this.game.update(deltaTime);
     this.game.draw();
     requestAnimationFrame(() => this.animate(ctx));

@@ -8,6 +8,7 @@ import {
   AnimationTriggerComponent,
   PointAndShootComponent,
   EnemiesVarietyComponent,
+  SideScrollerComponent,
 } from './modules';
 
 @Component({
@@ -22,6 +23,7 @@ import {
     AnimationTriggerComponent,
     PointAndShootComponent,
     EnemiesVarietyComponent,
+    SideScrollerComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

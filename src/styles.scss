@@ -1,14 +1,15 @@
 // /* You can add global styles to this file, and also import other style files */
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
-// body {
-//   background: linear-gradient(to bottom, red, green, blue);
-//   width: 100dvw;
-//   height: 100dvh;
-//   overflow: hidden;
-// }
+body {
+  background-color: black;
+  // background: linear-gradient(to bottom, red, green, blue);
+  // width: 100dvw;
+  // height: 100dvh;
+  // overflow: hidden;
+}
 
 // canvas {
 //   position: absolute;
