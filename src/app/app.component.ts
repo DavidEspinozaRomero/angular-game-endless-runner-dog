@@ -9,6 +9,7 @@ import {
   PointAndShootComponent,
   EnemiesVarietyComponent,
   SideScrollerComponent,
+  StateManagementComponent,
 } from './modules';
 
 @Component({
@@ -24,6 +25,7 @@ import {
     PointAndShootComponent,
     EnemiesVarietyComponent,
     SideScrollerComponent,
+    StateManagementComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
