@@ -1,0 +1,4 @@
+<canvas id="canvas1" #canvas1></canvas>
+@for( img of assets; let i = $index; track i) {
+<img [src]="img.src" [alt]="img.alt" class="" />
+}
