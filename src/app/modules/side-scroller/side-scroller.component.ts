@@ -232,7 +232,7 @@ class Player {
   weight = 1;
 
   fps = 20;
-  frameTime = 0;
+  frameTimer = 0;
   frameInterval = 1000 / this.fps;
   constructor(
     private readonly gameWidth: number,
@@ -272,11 +272,11 @@ class Player {
     if (inputHandler.keys.includes('ArrowLeft')) this.speed = -5;
     if (inputHandler.keys.includes('ArrowUp') && this.onGround()) this.vy = -32;
 
-    if (this.frameTime > this.frameInterval) {
-      this.frameTime = 0;
+    if (this.frameTimer > this.frameInterval) {
+      this.frameTimer = 0;
       this.frameX > this.maxFrameX ? (this.frameX = 0) : this.frameX++;
     } else {
-      this.frameTime += deltaTime;
+      this.frameTimer += deltaTime;
     }
     // horizontal movement
     this.x += this.speed;
@@ -379,7 +379,7 @@ class Enemy {
   speed = minMax(1, 5);
   markedForDeletion = false;
   fps = 20;
-  frameTime = 0;
+  frameTimer = 0;
   frameInterval = 1000 / this.fps;
 
   constructor(
@@ -390,11 +390,11 @@ class Enemy {
 
   update(deltaTime: number, score: WritableSignal<number>) {
     try {
-      if (this.frameTime > this.frameInterval) {
-        this.frameTime = 0;
+      if (this.frameTimer > this.frameInterval) {
+        this.frameTimer = 0;
         this.frame > this.maxFrame ? (this.frame = 0) : this.frame++;
       } else {
-        this.frameTime += deltaTime;
+        this.frameTimer += deltaTime;
       }
       this.x -= this.speed;
       if (this.x <= -this.width) {

@@ -48,7 +48,7 @@ export class Player implements PlayerProps {
   vy = 0;
   weight = 1;
   fps = 20;
-  frameTime = 0;
+  frameTimer = 0;
   frameInterval = 1000 / this.fps;
   constructor(
     public readonly gameWidth: number,
@@ -59,15 +59,15 @@ export class Player implements PlayerProps {
     this.currentState.handleInput(input);
     this.move();
 
-    if (this.frameTime > this.frameInterval) {
-      this.frameTime = 0;
+    if (this.frameTimer > this.frameInterval) {
+      this.frameTimer = 0;
       if (this.frameX < this.maxFrame) {
         this.frameX++;
       } else {
         this.frameX = 0;
       }
     } else {
-      this.frameTime += deltaTime;
+      this.frameTimer += deltaTime;
     }
   }
 

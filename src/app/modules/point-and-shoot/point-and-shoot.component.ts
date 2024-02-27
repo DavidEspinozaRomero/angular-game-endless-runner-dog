@@ -213,8 +213,8 @@ class Explosion {
   ) {
     this.image.src = 'assets/boom.png';
     // center explosion in mouse position in basic drawing
-    this.x = x - this.width / 2;
-    this.y = y - this.height / 2;
+    this.x = x - this.width * 0.5;
+    this.y = y - this.height * 0.5;
   }
 
   update() {
