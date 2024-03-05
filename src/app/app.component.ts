@@ -10,6 +10,7 @@ import {
   EnemiesVarietyComponent,
   SideScrollerComponent,
   StateManagementComponent,
+  StarShipFightsComponent,
 } from './modules';
 import { EndlessRunnerComponent } from './endless-runner/endless-runner.component';
 
@@ -28,6 +29,7 @@ import { EndlessRunnerComponent } from './endless-runner/endless-runner.componen
     SideScrollerComponent,
     StateManagementComponent,
     EndlessRunnerComponent,
+    StarShipFightsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -5,4 +5,6 @@ export * from './parallax-background/parallax-background.component';
 export * from './point-and-shoot/point-and-shoot.component';
 export * from './side-scroller/side-scroller.component';
 export * from './sprite-animacion-tecnique/sprite-animacion-tecnique.component';
+export * from './star-ship-fights/star-ship-fights.component';
+export * from './state-management/models';
 export * from './state-management/state-management.component';
